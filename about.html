@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #c03737;
+		}
+		
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 50px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			text-align: center;
+		}
+		
+		.box {
+			width: 30%;
+			height: 300px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			margin-bottom: 50px;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.box:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.6);
+			opacity: 0;
+			transition: all 0.3s ease-in-out;
+		}
+		
+		.box:hover:before {
+			opacity: 1;
+		}
+		
+		.box img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: cover;
+			transition: all 0.3s ease-in-out;
+			transform: scale(1);
+		}
+		
+		.box:hover img {
+			transform: scale(1.1);
+		}
+		
+		.box h2 {
+			font-size: 24px;
+			font-weight: bold;
+			color: #fff;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			padding: 20px;
+			background-color: rgba(0,0,0,0.8);
+			opacity: 0;
+			transform: translateY(100%);
+			transition: all 0.3s ease-in-out;
+		}
+		
+		.box:hover h2 {
+			opacity: 1;
+			transform: translateY(0%);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<img src="https://picsum.photos/800/800?random=1">
+			<h2>Our History</h2>
+		</div>
+		<div class="box">
+			<img src="https://picsum.photos/800/800?random=2">
+			<h2>Our Team</h2>
+		</div>
+		<div class="box">
+			<img src="https://picsum.photos/800/800?random=3">
+			<h2>Our Mission</h2>
+		</div>
+	</div>
+</body>
+</html>

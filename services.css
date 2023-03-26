@@ -1,0 +1,76 @@
+header {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 50px;
+	animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card {
+	width: 300px;
+	height: 400px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	margin: 50px;
+	overflow: hidden;
+	position: relative;
+	animation: slideIn 1s;
+}
+
+.card:hover i {
+	transform: rotate(360deg);
+}
+
+.card:hover p {
+	transform: translateY(0%);
+	opacity: 1;
+}
+
+.card i {
+	font-size: 5rem;
+	color: #333;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	transition: all 0.3s ease-in-out;
+}
+
+.card h2 {
+	color: #333;
+	margin: 20px 0 0;
+	text-align: center;
+}
+
+.card p {
+	color: #666;
+	margin: 20px;
+	text-align: justify;
+	transform: translateY(50%);
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(0%);
+	}
+}
